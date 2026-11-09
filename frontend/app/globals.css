@@ -1,0 +1,50 @@
+/* Make padding and borders count inside an element's width */
+* { box-sizing: border-box; }
+/* Page: no outer margin, system font, light grey background, dark text */
+body { margin: 0; font-family: system-ui, sans-serif; background: #f1f3f6; color: #1d2330; }
+/* Top bar: row layout, items spread apart, wraps on small screens, white with a bottom line */
+header { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; padding: 10px 16px; background: #fff; border-bottom: 1px solid #dde1e8; }
+/* Main content: padded, at most 1200px wide, centered */
+main { padding: 16px; max-width: 1200px; margin: 0 auto; }
+/* Headings: remove default spacing */
+h1, h2 { margin: 0; }
+/* Main title size */
+h1 { font-size: 20px; }
+/* Form controls: use the page font, padding, light border, rounded corners, white background */
+input, select, textarea, button { font: inherit; padding: 8px; border: 1px solid #c5cbd6; border-radius: 6px; background: #fff; }
+/* Default button: pointer cursor, blue with white text, no border */
+button { cursor: pointer; background: #2f5bea; color: #fff; border: 0; }
+/* "ghost" button: grey and quiet */
+button.ghost { background: #e8ebf1; color: #1d2330; }
+/* "danger" button: red */
+button.danger { background: #d64545; }
+/* Disabled button looks faded */
+button:disabled { opacity: .6; }
+/* Error text: red and small */
+.err { color: #d64545; font-size: 14px; margin: 6px 0; }
+/* Secondary text: grey */
+.muted { color: #6b7488; }
+/* A horizontal group of items that wraps and has gaps */
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 8px 0; }
+/* White rounded box with a soft shadow */
+.card { background: #fff; border-radius: 8px; padding: 12px; box-shadow: 0 1px 2px #0001; }
+/* Responsive grid: as many columns as fit, each at least 220px */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+/* Links look like normal text */
+a { color: inherit; text-decoration: none; }
+/* The board: columns side by side, scrolls sideways when too wide */
+.cols { display: flex; gap: 12px; overflow-x: auto; align-items: flex-start; padding-bottom: 12px; }
+/* One column: fixed 270px width, grey background, rounded */
+.col { flex: 0 0 270px; background: #e4e8ef; border-radius: 8px; padding: 8px; min-height: 80px; }
+/* A task card: white, rounded, shows a "grab" hand cursor because it can be dragged */
+.task { background: #fff; border-radius: 6px; padding: 8px; margin: 8px 0; cursor: grab; box-shadow: 0 1px 2px #0002; font-size: 14px; }
+/* Small pill label (priority and tags) */
+.badge { font-size: 11px; padding: 2px 6px; border-radius: 10px; background: #e8ebf1; margin-right: 4px; }
+/* Priority colors: red, amber, green */
+.High { background: #fbd5d5; }
+.Medium { background: #fde9bf; }
+.Low { background: #d6f0dc; }
+/* Full-screen dark overlay that centers the task form */
+.modal { position: fixed; inset: 0; background: #0006; display: flex; align-items: center; justify-content: center; padding: 12px; z-index: 5; }
+/* The form panel inside the overlay: white, rounded, scrolls if tall, fields stacked with gaps */
+.modal form { background: #fff; border-radius: 8px; padding: 16px; width: 100%; max-width: 440px; max-height: 90vh; overflow: auto; display: grid; gap: 8px; }

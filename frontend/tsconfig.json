@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    // JavaScript version to compile to
+    "target": "es2017",
+    // Built-in type definitions to include: browser (dom) and latest JavaScript
+    "lib": ["dom", "esnext"],
+    // Allow plain .js files in the project
+    "allowJs": true,
+    // Skip type-checking of library .d.ts files (faster)
+    "skipLibCheck": true,
+    // Strict type checking is off (relaxed)
+    "strict": false,
+    // Next.js does the compiling; TypeScript only checks types
+    "noEmit": true,
+    // Smoother importing of older-style libraries
+    "esModuleInterop": true,
+    // Use modern import/export modules
+    "module": "esnext",
+    // How imports are resolved (bundler style, as used by Next.js)
+    "moduleResolution": "bundler",
+    // Allow importing .json files
+    "resolveJsonModule": true,
+    // Each file must be usable on its own
+    "isolatedModules": true,
+    // Keep JSX as-is; Next.js compiles it
+    "jsx": "preserve",
+    // Faster repeated builds
+    "incremental": true,
+    // Enable the Next.js TypeScript plugin
+    "plugins": [{ "name": "next" }],
+    // Alias: "@/lib/api" means "./lib/api" from the project root
+    "paths": { "@/*": ["./*"] }
+  },
+  // Files TypeScript should check
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  // Files to ignore
+  "exclude": ["node_modules"]
+}
